@@ -1,0 +1,38 @@
+body {
+  padding: min(10vw, 10vh);
+  background-color: #343a40;
+}
+
+div {
+  color: #fff;
+}
+
+.container {
+  display: flex;
+}
+
+.gutter {
+  position: relative;
+  width: min(10vw, 10vh);
+  text-align: right;
+  padding-right: 10px;
+  background-color: #495057;
+  border-right: 4px solid #52b788;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 10px;
+  margin-right: 10px;
+  height: min(50vw, 50vh);
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+.line-number {
+  position: absolute;
+  left: 0;
+  right: 0;
+  font-size: 2rem;
+  text-align: right;
+  padding-right: 0.3em;
+}
