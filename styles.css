@@ -1,3 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+
+html {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 80%;
+}
+
 body {
   padding: min(10vw, 10vh);
   background-color: #343a40;
@@ -5,6 +12,23 @@ body {
 
 div {
   color: #fff;
+}
+
+p {
+  font-size: 1.5rem;
+  padding: 0;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.7rem;
+  padding: 0;
+  margin: 0;
+}
+
+span {
+  color: #52b788;
 }
 
 .container {
@@ -21,7 +45,7 @@ div {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 10px;
   margin-right: 10px;
-  height: min(50vw, 50vh);
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .main-content {
@@ -35,4 +59,36 @@ div {
   font-size: 2rem;
   text-align: right;
   padding-right: 0.3em;
+}
+
+.status-bar {
+  background-color: #495057;
+  display: flex;
+  gap: 1rem;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.status-bar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.status-bar-inner > div {
+  display: flex;
+  align-items: center;
+}
+
+.file-name-div,
+.encoding-name-div {
+  color: #eeeeff;
+  font-weight: bold;
+  background-color: #6c757d;
+  border-radius: 5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 4px;
 }
