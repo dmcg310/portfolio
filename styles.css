@@ -17,18 +17,30 @@ div {
 p {
   font-size: 1.5rem;
   padding: 0;
-  padding-bottom: 1rem;
+  padding-bottom: 0.7rem;
   margin: 0;
 }
 
 h3 {
   font-size: 1.7rem;
   padding: 0;
+  padding-bottom: 0.8rem;
   margin: 0;
 }
 
 span {
   color: #52b788;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #343a40;
+}
+
+#projects-ul {
+  padding-top: 0;
+  margin-top: 0;
+  font-size: 1.5rem;
 }
 
 .container {
