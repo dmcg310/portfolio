@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  padding: min(10vw, 10vh);
+  padding: 20px;
   background-color: #343a40;
 }
 
