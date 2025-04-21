@@ -25,15 +25,8 @@ const About = () => {
           <div className="space-y-6">
             <h3 className="text-xl font-semibold text-navy">Software Engineer</h3>
             <p className="text-lg text-gray-700">
-              TODO I'm a passionate software engineer specializing in full-stack development with a focus on backend systems.
-              I enjoy architecting scalable, efficient solutions for complex problems using modern technologies and best practices.
+              I'm a software engineer with a passion for building efficient and robust systems. I focus on low-level programming, graphics engineering, and full-stack development, focusing on creating performant solutions with clean, maintainable code.
             </p>
-            <p className="text-lg text-gray-700">
-              TODO When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects,
-              and staying up-to-date with the latest developments in software engineering. I'm committed to continuous
-              learning and improvement in my craft.
-            </p>
-
             <div className="pt-4">
               <h4 className="text-xl font-semibold text-navy mb-4">Core Skills</h4>
               <div className="flex flex-wrap gap-3">

@@ -56,7 +56,6 @@ const Header = () => {
             <a href="#" className="text-navy hover:text-light-blue font-medium">Home</a>
             <a href="#about" className="text-navy hover:text-light-blue font-medium">About</a>
             <a href="#projects" className="text-navy hover:text-light-blue font-medium">Projects</a>
-            <a href="#contact" className="text-navy hover:text-light-blue font-medium">Contact</a>
           </nav>
         )}
       </div>
