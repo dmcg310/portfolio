@@ -32,7 +32,7 @@ const Projects = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-navy mb-4">My Projects</h2>
           <div className="w-16 h-1 bg-light-blue mx-auto"></div>
           <p className="mt-6 text-lg text-gray-700 max-w-2xl mx-auto">
-            Here are some of my recent projects from GitHub
+            Here are some of my recent projects from GitHub, more details can be found on each project's repository!
           </p>
         </div>
 
