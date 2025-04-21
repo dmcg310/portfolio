@@ -75,7 +75,7 @@ export function useGitHubProjects(username: string, limit: number = 30) {
                     }
                 }
 
-                const response = await fetch(`https://api.github.com/users/${username}/repos?sort=updated&per_page=${limit}`);
+                const response = await fetch(`https://api.github.com/users/${username}/repos?per_page=${limit}`);
                 if (!response.ok) {
                     throw new Error(`Error fetching GitHub repos: ${response.status}`);
                 }
