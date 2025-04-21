@@ -1,12 +1,35 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useGitHubProjects } from '../hooks/useGitHubProjects';
 import { FaGithub, FaStar, FaCodeBranch, FaExternalLinkAlt, FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 
 const Projects = () => {
-  const projectsPerPage = 6;
+  const [projectsPerPage, setProjectsPerPage] = useState(getInitialProjectsPerPage());
   const [currentPage, setCurrentPage] = useState(0);
   const { projects, loading, error } = useGitHubProjects('dmcg310', 30);
   const totalPages = projects.length > 0 ? Math.ceil(projects.length / projectsPerPage) : 0;
+
+  function getInitialProjectsPerPage() {
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth < 640) return 1; // Mobile
+      if (window.innerWidth < 1024) return 2; // Tablet
+      return 6; // Desktop
+    }
+
+    return 6; // Default for SSR
+  }
+
+  useEffect(() => {
+    const handleResize = () => {
+      const newProjectsPerPage = getInitialProjectsPerPage();
+      if (newProjectsPerPage !== projectsPerPage) {
+        setProjectsPerPage(newProjectsPerPage);
+        setCurrentPage(0);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [projectsPerPage]);
 
   const getCurrentPageProjects = () => {
     const startIndex = currentPage * projectsPerPage;
@@ -24,6 +47,12 @@ const Projects = () => {
       prevPage > 0 ? prevPage - 1 : prevPage
     );
   };
+
+  useEffect(() => {
+    if (currentPage >= totalPages && totalPages > 0) {
+      setCurrentPage(totalPages - 1);
+    }
+  }, [totalPages, currentPage]);
 
   return (
     <section id="projects" className="py-16 md:py-24 bg-gray-50">
@@ -50,8 +79,8 @@ const Projects = () => {
 
         {/* Projects gallery with pagination */}
         <div className="relative">
-          {/* Navigation arrows */}
-          {projects.length > projectsPerPage && (
+          {/* Navigation arrows - always show them when we have multiple pages */}
+          {totalPages > 1 && (
             <>
               <button
                 onClick={goToPrevPage}
@@ -74,8 +103,8 @@ const Projects = () => {
             </>
           )}
 
-          {/* Projects grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-10">
+          {/* Projects grid - responsive based on screen size */}
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-5 sm:mx-10`}>
             {getCurrentPageProjects().map((project) => (
               <div
                 key={project.id}
@@ -136,7 +165,8 @@ const Projects = () => {
               <button
                 key={index}
                 onClick={() => setCurrentPage(index)}
-                className={`w-3 h-3 rounded-full transition-all ${currentPage === index ? 'bg-light-blue scale-125' : 'bg-gray-300 hover:bg-gray-400'}`}
+                className={`w-3 h-3 rounded-full transition-all ${currentPage === index ? 'bg-light-blue scale-125' : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
                 aria-label={`Go to page ${index + 1}`}
               />
             ))}
