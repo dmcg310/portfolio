@@ -1,3 +1,7 @@
+import profilePicture from '../assets/profile-picture.jpg';
+import { FaDatabase, FaJava } from 'react-icons/fa';
+import { SiAmazon, SiC, SiCplusplus, SiRust, SiGo, SiNodedotjs } from 'react-icons/si';
+
 const About = () => {
   return (
     <section id="about" className="py-16 md:py-24 bg-white">
@@ -11,7 +15,7 @@ const About = () => {
           <div>
             <div className="aspect-square rounded-xl overflow-hidden border-4 border-navy shadow-xl max-w-sm mx-auto">
               <img
-                src="assets/profile-picture.jpg"
+                src={profilePicture}
                 alt="Profile Picture"
                 className="w-full h-full object-cover"
               />
@@ -19,30 +23,44 @@ const About = () => {
           </div>
 
           <div className="space-y-6">
-            <h3 className="text-navy">Software Engineer</h3>
+            <h3 className="text-xl font-semibold text-navy">Software Engineer</h3>
             <p className="text-lg text-gray-700">
-              @TODO I'm a passionate backend developer with expertise in building scalable,
-              efficient, and maintainable software solutions. With a strong foundation in
-              [Your Core Technologies], I enjoy tackling complex problems and creating
-              elegant solutions.
+              TODO I'm a passionate software engineer specializing in full-stack development with a focus on backend systems.
+              I enjoy architecting scalable, efficient solutions for complex problems using modern technologies and best practices.
             </p>
             <p className="text-lg text-gray-700">
-              @TODO When I'm not coding, you'll find me [Your Hobbies/Interests]. I believe in
-              continuous learning and staying updated with the latest technologies and best practices.
+              TODO When I'm not coding, you'll find me exploring new technologies, contributing to open-source projects,
+              and staying up-to-date with the latest developments in software engineering. I'm committed to continuous
+              learning and improvement in my craft.
             </p>
 
             <div className="pt-4">
-              <h4 className="text-navy mb-4">Core Skills</h4>
-              <div className="flex flex-wrap gap-2">
-                @TODO Use icons here and throughout the site
-                <span className="px-3 py-1 bg-navy text-white rounded-full">JavaScript</span>
-                <span className="px-3 py-1 bg-navy text-white rounded-full">TypeScript</span>
-                <span className="px-3 py-1 bg-navy text-white rounded-full">Node.js</span>
-                <span className="px-3 py-1 bg-navy text-white rounded-full">Python</span>
-                <span className="px-3 py-1 bg-navy text-white rounded-full">SQL</span>
-                <span className="px-3 py-1 bg-navy text-white rounded-full">MongoDB</span>
-                <span className="px-3 py-1 bg-navy text-white rounded-full">AWS</span>
-                <span className="px-3 py-1 bg-navy text-white rounded-full">Docker</span>
+              <h4 className="text-xl font-semibold text-navy mb-4">Core Skills</h4>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-3 py-2 bg-navy text-white rounded-full flex items-center gap-2">
+                  <SiGo /> Go
+                </span>
+                <span className="px-3 py-2 bg-navy text-white rounded-full flex items-center gap-2">
+                  <SiC /> C
+                </span>
+                <span className="px-3 py-2 bg-navy text-white rounded-full flex items-center gap-2">
+                  <SiCplusplus /> C++
+                </span>
+                <span className="px-3 py-2 bg-navy text-white rounded-full flex items-center gap-2">
+                  <SiRust /> Rust
+                </span>
+                <span className="px-3 py-2 bg-navy text-white rounded-full flex items-center gap-2">
+                  <FaJava /> Java
+                </span>
+                <span className="px-3 py-2 bg-navy text-white rounded-full flex items-center gap-2">
+                  <SiNodedotjs /> Node.js
+                </span>
+                <span className="px-3 py-2 bg-navy text-white rounded-full flex items-center gap-2">
+                  <FaDatabase /> SQL
+                </span>
+                <span className="px-3 py-2 bg-navy text-white rounded-full flex items-center gap-2">
+                  <SiAmazon /> AWS
+                </span>
               </div>
             </div>
           </div>

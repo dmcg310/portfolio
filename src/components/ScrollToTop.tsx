@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 
-// @TODO: We should also use smooth scroll behavior for the whole site e.g. jump to anchor links
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -31,7 +30,6 @@ const ScrollToTop = () => {
         } fixed bottom-8 right-8 z-50 p-3 rounded-full bg-light-blue text-white shadow-lg transition-opacity duration-300 hover:bg-blue focus:outline-none`}
       aria-label="Scroll to top"
     >
-      {/* @TODO: Add cursor change on hover and throughout the site , too*/}
       <svg
         className="w-6 h-6"
         fill="none"

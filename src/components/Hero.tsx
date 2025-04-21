@@ -1,3 +1,5 @@
+import { FaGithub } from 'react-icons/fa';
+
 const Hero = () => {
   return (
     <section className="bg-gradient-to-r from-navy to-blue py-24 md:py-32 text-white">
@@ -7,28 +9,31 @@ const Hero = () => {
             Hi, I'm <span className="text-light-blue font-extrabold">Darragh</span>
           </h1>
           <p className="text-xl mb-8 text-gray-100">
-            A Software Engineer with something something something @TODO
+            A passionate Software Engineer focused TODO
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a
               href="#projects"
-              className="px-6 py-3 rounded-md transition-all duration-300 font-medium bg-light-blue text-white hover:bg-white hover:text-navy"
+              className="px-6 py-3 rounded-md transition-all duration-300 font-medium bg-light-blue text-white hover:bg-white hover:text-navy flex items-center gap-2"
             >
-              View My Work
+              <span>View My Work</span>
+              <svg className="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M10 3a1 1 0 00-1 1v10.586l-3.293-3.293a1 1 0 10-1.414 1.414l5 5a1 1 0 001.414 0l5-5a1 1 0 00-1.414-1.414L11 14.586V4a1 1 0 00-1-1z" clipRule="evenodd" />
+              </svg>
             </a>
             <a
               href="https://github.com/dmcg310"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-md transition-all duration-300 font-medium bg-transparent border-2 border-white hover:bg-white hover:text-navy"
+              className="px-6 py-3 rounded-md transition-all duration-300 font-medium bg-transparent border-2 border-white hover:bg-white hover:text-navy flex items-center gap-2"
             >
-              GitHub Profile
+              <FaGithub className="text-xl" />
+              <span>GitHub Profile</span>
             </a>
           </div>
         </div>
       </div>
 
-      {/* @TODO: Maybe we can combine images from my projects here */}
       {/* Decorative wave shape at the bottom */}
       <div className="mt-16 md:mt-24">
         <svg viewBox="0 0 1440 120" className="w-full h-auto">
